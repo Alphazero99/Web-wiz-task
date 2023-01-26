@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    
+    <div class="div_one"> 
+        <nav class="navigation">
+            <ol>
+                <li class="navvv"><a href="">Home</a></li>
+                <li class="navvv"><a href="">About me</a></li>
+                <li class="navvv"><a href="">Contact</a></li>
+            </ol>
+        </nav>
+        
+
+    </div>
+    
+    <div class="div_two">
+        <h1 class="heading">Web Wiz Club</h1>
+    </div>
+    
+    <div class="div_three">
+        <p class="para"><i>
+            Web Wiz is a web development club for students of NIT Rourkela.
+            It is not just any other technical club , it is made for students ,
+            focuses on development and design and has a practical guide. They are 
+            always available whenever the students need help and guidance. 
+        </i>
+        </p>
+    </div>
+        
+    
+
+    
+    <div class="div_five">
+        <button class="button_one">Welcome</button>
+    </div>
+    <div class="div_six">
+        <button class="button_two">Change background color</button>
+    </div>
+    <div class="div_seven">
+        <button class="button_three">Change heading text</button>
+    </div>
+    <div class="div_eight">
+        <button class="button_four">Click me if you are a marvel fan</button>
+    </div>
+        
+        
+
+
+
+    <footer class="footer">
+        <div id = "clock" onload="currentTime()">
+        </div>
+        <script>
+            function currentTime() {
+            let date = new Date(); 
+            let hh = date.getHours();
+            let mm = date.getMinutes();
+            let ss = date.getSeconds();
+            let session = "AM";
+    
+            if(hh === 0){
+                hh = 12;
+            }
+            if(hh > 12){
+                hh = hh - 12;
+                session = "PM";
+             }
+    
+             hh = (hh < 10) ? "0" + hh : hh;
+             mm = (mm < 10) ? "0" + mm : mm;
+             ss = (ss < 10) ? "0" + ss : ss;
+        
+             let time = hh + ":" + mm + ":" + ss + " " + session;
+    
+            document.getElementById("clock").innerText = time; 
+            let t = setTimeout(function(){ currentTime() }, 1000);
+          }
+    
+          currentTime();
+        </script>
+    </footer>
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
